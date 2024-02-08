@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+*, :root{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'inter', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+body{
+  background-color: #000;
+}
+main{
+  padding: 1.25rem;
+  max-width: 40rem;
+  margin: 0 auto 4rem;
+}
+header{
+  margin-top: 4rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.0625rem solid #A992E2;
+}
+header h1{
+font-size: 1.875rem;
+color: #A992E2;
+margin-top: 1.25rem;
+}
+#quiz {
+  counter-reset: quiz-item;
+}
+.quiz-item{
+  margin-top: 1.5rem;
+  border: 0.0625rem solid #3A506B;
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+.quiz-item h3{
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  color: #A992E2;
+  background-color: #4a3a59;
+}
+.quiz-item h3:before {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  align-items: center;
+  counter-increment: quiz-item;
+  content: counter(quiz-item);
+
+  background-color: #3A506B;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+}
+.quiz-item dl{
+  padding: 1.25rem 1.5rem;
+
+}
+.quiz-item dl dt{
+  display: flex;
+  font-size: 1rem;
+ line-height: 1.5rem;
+ letter-spacing: 0;
+ align-items: center;
+ gap: 0.5rem;
+ color: #A992E2;
+
+}
+input{
+  all: unset;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  align-items: center;
+  border-radius: 50%;
+  border: 0.0625rem solid #3A506B;
+  width: 1rem;
+  height: 1rem;
+
+
+}
+input:checked {
+  border: 0.0625rem solid #A992E2;
+}
+
+input:checked::before {
+  content: "";
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: #A992E2;
+  border-radius: 50%;
+
+}
+
+#acertos {
+text-align: center;
+background-color: #A992E2;
+border-radius: 0.625rem;
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+padding: 0.75rem;
+
+}
